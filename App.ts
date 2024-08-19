@@ -37,17 +37,17 @@ const contractABI = [
 ]
 
 // The deployed contract address
-const contractAddress = '0x79bddf6537085D83Aef446dA62e6D247d4eb04Af'
+const contractAddress = '0x5fbdb2315678afecb367f032d93f642f64180aa3'
 
 // Connect to Ethereum provider (e.g., MetaMask or Infura)
 // Use ethers.providers.Web3Provider if you're using a browser-based provider like MetaMask
-const provider = new ethers.JsonRpcProvider(
-  'https://mainnet.infura.io/v3/YOUR API KEY'
-)
+const provider = new ethers.JsonRpcProvider('http://127.0.0.1:8545')
+
+//'https://mainnet.infura.io/v3/YOUR API KEY'
 
 // Get the wallet (or connect a signer for the transaction)
 // Replace with the private key of the account you want to use to send the transaction
-const signer = new ethers.Wallet('YOUR PRIVATE KEY', provider)
+const signer = new ethers.Wallet('0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d', provider)
 
 // A helper function to release allowance
 async function releaseAllowance() {
@@ -119,6 +119,6 @@ async function fundContract() {
 }
 
 // Call the functions
-releaseAllowance()
+// releaseAllowance()
 // getContractBalance()
-// fundContract()
+fundContract()
