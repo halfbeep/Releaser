@@ -1,4 +1,4 @@
-import BigNumber, { BigNumberish, ethers } from 'ethers'
+import { BigNumberish, ethers } from 'ethers'
 
 // Define the ABI for the contract, including both releaseAllowance and contractBalance functions
 const contractABI = [
